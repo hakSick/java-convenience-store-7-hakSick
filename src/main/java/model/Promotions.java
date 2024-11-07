@@ -36,12 +36,10 @@ public class Promotions {
 
     public List<Promotions> loadPromotions() {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
-            return br.lines()
-                    .skip(1)
+            return br.lines().skip(1)
                     .map(line -> line.split(","))
                     .map(values -> new Promotions(values[0], Integer.parseInt(values[1]),
-                            Integer.parseInt(values[2]), values[3], values[4]))
-                    .toList();
+                            Integer.parseInt(values[2]), values[3], values[4])).toList();
         } catch (IOException e) {
             System.err.println("파일 읽기 중 오류 발생: " + e.getMessage());
             return new ArrayList<>();
