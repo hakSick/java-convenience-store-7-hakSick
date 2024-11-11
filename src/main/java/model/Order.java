@@ -1,8 +1,8 @@
 package model;
 
 public class Order {
-    private String buyname;
-    private int buycount;
+    public String buyname;
+    public int buycount;
 
     public Order(String buyname, int buycount) {
         this.buyname = buyname;
