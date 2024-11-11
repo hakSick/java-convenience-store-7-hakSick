@@ -21,13 +21,13 @@ public class ModelTest {
 
     @Test
     void testLoadProducts() {
-        Products products = new Products("", 0, 0,  "");
+        Products products = new Products("", 0, 0, "");
 
         List<Products> productsList = products.loadProducts();
 
         Products firstProduct = productsList.getFirst();
 
-        Products expectedProduct = new Products("콜라",1000,10,"탄산2+1");
+        Products expectedProduct = new Products("콜라", 1000, 10, "탄산2+1");
 
         assertEquals(expectedProduct.toString(), firstProduct.toString(), "잘못된 파일 불러오기");
     }
